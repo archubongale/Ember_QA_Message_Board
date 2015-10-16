@@ -1,0 +1,47 @@
+<h2 class="question-answer">Question Info</h2>
+<div class="well">
+<h2 class="text-success">{{model.question}}?</h2>
+<h4>By:&nbsp;&nbsp;<span class="author">{{model.author}}</span></h4>
+<hr>
+
+
+{{#if isEditing}}
+  <form class="edit-form">
+    <div class="form-group">
+      <label for="question">Question</label>
+      {{input id="question" class="form-control" value=question}}
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input id="author" class="form-control" value=author}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea id="description" class="form-control" rows="15" value=description}}
+    </div>
+
+    <button class="btn btn-success btn-sm" {{action 'save'}}>Save</button>
+  </form>
+{{else}}
+<h4 class="lead">{{model.description}}</h4>
+<br>
+  <button class="btn btn-primary btn-xs" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-danger btn-xs" {{action 'delete'}}>Delete</button>
+{{/if}}
+
+  <hr>
+
+<div>
+<h2 class="question-answer">Answers:</h2>
+<hr>
+<ul class="list-unstyled">
+  {{#each answer in model.answers}}
+
+  <li class="answer">{{#link-to 'answer' answer.id}}{{answer.answer}} {{/link-to}} </li>  <br>
+  {{/each}}
+</ul>
+</div>
+<p><button class="btn btn-default btn-lg btn-block" {{action 'showModal' 'new-answer-modal' model.id}}>Add new answer</button></p>
+</div>
+{{outlet}}
+{{outlet 'modal'}}

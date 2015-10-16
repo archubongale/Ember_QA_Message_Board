@@ -1,0 +1,64 @@
+.title {
+   color: #fff;
+   font-size: 60px;
+   text-align: center;
+}
+
+.title > a {
+  color: black;
+  font: italic;
+}
+
+.title a:hover {
+  text-decoration: none;
+}
+
+.questions {
+  font-size: 125%;
+  text-align: center;
+}
+
+.questions a:hover {
+  text-decoration: none;
+}
+
+.answer {
+  padding: 5px;
+  margin-top: 2px;
+}
+
+h2.question-answer {
+  text-align: center;
+  color: black;
+}
+
+.well {
+  color: #F0F0E0;
+  border: 2px;
+}
+
+h3.answer {
+  text-align: center;
+
+}
+
+h2.text-success {
+  color: #4485BC;
+}
+
+h4 {
+  color: black;
+}
+
+.edit-form {
+  color: black;
+}
+.author {
+  color: blue;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+body {
+  background-color: #B0E0E0;
+}

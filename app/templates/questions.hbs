@@ -1,0 +1,28 @@
+<div class="row">
+
+  <div class="col-12">
+    <h1 class='title'><a href="/">QA Message Board</a></h1>
+    <hr>
+  </div>
+
+  <div class='col-md-4'>
+    <h2 class="question-answer">Questions</h2>
+    <div class="well">
+      <ul class="list-unstyled">
+        {{#each question in model}}
+        <li>
+          <span class='questions'>
+            {{#link-to 'question' question.id}}{{question.question}} <small class="author"> By: {{question.author}}</small>{{/link-to}}
+          </span>
+        </li>
+        <br>
+        {{/each}}
+      </ul>
+      <button class="btn btn-default btn-lg btn-block" {{action 'showModal' 'new-question-modal' model}}>Add new question</button>
+    </div>
+  </div>
+
+  <div class='col-md-8'>
+    {{outlet}}
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{{#my-modal title='Add new quesetion' ok='save' close='removeModal'}}
+  <form {{action 'ok' on='submit' target=view}}>
+    <div class="form-group">
+      <label>Question</label>
+      {{input id="question" class="form-control" value=question}}
+      <label>Author</label>
+      {{input id="author" class="form-control" value=author}}
+      <label>Description</label>
+      {{input id="description" class="form-control" value=description}}
+    </div>
+  </form>
+{{/my-modal}}

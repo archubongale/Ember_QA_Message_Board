@@ -1,0 +1,8 @@
+{
+  "firebase": "questions-answers",
+  "public": "dist",
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+    }]
+}
